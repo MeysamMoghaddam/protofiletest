@@ -17,7 +17,10 @@ message HelloRequest {
   optional string name = 1;
   Test test=2;
 }
-
+message HelloRequest2 {
+  optional string name = 1;
+  Test test=2;
+}
 // The response message containing the greetings.
 message HelloReply {
   string message = 1;
