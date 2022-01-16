@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+option csharp_namespace = "testGrpcService";
+
+package greet;
+
+import "google/protobuf/timestamp.proto";
+
+// The greeting service definition.
+service Greeter {
+  // Sends a greeting
+  rpc SayHello (HelloRequest) returns (HelloReply);
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+  optional string name = 1;
+  Test test=2;
+}
+
+// The response message containing the greetings.
+message HelloReply {
+  string message = 1;
+}
+
+
+message Test {
+  string test_name = 1;
+}
